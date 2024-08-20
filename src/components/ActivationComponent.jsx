@@ -62,12 +62,12 @@ const ActivationComponent = () => {
                   تسجيل الدخول كمشري
                 </div>
               </a>
-              <a target="_blank" href="https://amazonbuy.netlify.app/register">
+              <a target="_blank" href="https://amazonbuy-dashboard.vercel.app/register">
                 <div className="px-8 w-full py-2 bg-[#ad2cc4] shadow hover:shadow-red-500/50 text-white rounded-md flex justify-center items-center gap-2 mb-3">
                   تسجيل الدخول كبائع
                 </div>
               </a>
-              <a target="_blank" href="https://amazonbuy.netlify.app/register">
+              <a target="_blank" href="https://amazonbuy-dashboard.vercel.app/register">
                 <div className="w-full py-2 bg-[#ad2cc4] shadow hover:shadow-red-500/50 text-white rounded-md flex justify-center items-center gap-2 mb-3">
                   انشاء حساب كبائع
                 </div>
