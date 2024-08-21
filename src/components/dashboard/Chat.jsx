@@ -14,7 +14,7 @@ import toast from "react-hot-toast";
 import io from "socket.io-client";
 import { FaList } from "react-icons/fa";
 
-const socket = io("https://continued-sheilah-matrixio-7c2a70e3.koyeb.app");
+const socket = io("https://amazonbuy-web-production.up.railway.app");
 
 const Chat = () => {
   const scrollRef = useRef();
