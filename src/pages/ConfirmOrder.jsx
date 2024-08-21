@@ -55,7 +55,7 @@ const ConfirmOrder = () => {
         const orderId = localStorage.getItem('orderId')
         if (orderId) {
             try {
-                await axios.get(`https://amazonbuy-web-production.up.railway.app/api/order/confirm/${orderId}`)
+                await axios.get(`https://continued-sheilah-matrixio-7c2a70e3.koyeb.app/api/order/confirm/${orderId}`)
                 localStorage.removeItem('orderId')
                 setLoader(false)
             } catch (error) {
