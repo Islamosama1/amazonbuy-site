@@ -40,7 +40,7 @@ const OrderDetails = () => {
         </div>
 
         <div className="text-slate-600">
-          <h2 className="font-mono">سعر : ${myOrder.price} يشمل الشحن</h2>
+          <h2 className="font-mono">سعر : ج.م{myOrder.price} يشمل الشحن</h2>
           <p className="font-mono">
             {" "}
             حالة الدفع :{" "}
@@ -56,7 +56,7 @@ const OrderDetails = () => {
             </span>{" "}
           </p>
 
-          <p className="font-mono">
+          {/* <p className="font-mono">
             {" "}
             حالة الطلب :{" "}
             <span
@@ -69,13 +69,13 @@ const OrderDetails = () => {
               {" "}
               {myOrder.delivery_status}{" "}
             </span>{" "}
-          </p>
+          </p> */}
         </div>
       </div>
 
       <div className="mt-4">
         <h2 className="text-slate-600 text-lg pb-2 font-sans font-bold">
-          طلب المنتجات{" "}
+          الطلب{" "}
         </h2>
         <div className="flex gap-5 flex-col">
           {myOrder.products?.map((p, i) => (
@@ -85,10 +85,10 @@ const OrderDetails = () => {
                   <img className="w-[55px] h-[55px]" src={p.images[0]} alt="" />
                   <div className="flex text-sm flex-col justify-start items-start">
                     <Link> {p.name} </Link>
-                    <p>
+                    {/* <p>
                       {" "}
                       <span>ماركة : {p.brand}</span>{" "}
-                    </p>
+                    </p> */}
                     <p>
                       <span>كمية : {p.quantity}</span>
                     </p>
@@ -96,11 +96,11 @@ const OrderDetails = () => {
                 </div>
 
                 <div className="pl-4 flex flex-col">
-                  <h2 className="text-md text-green-800">
+                  {/* <h2 className="text-md text-green-800">
                     ج.م{p.price - Math.floor((p.price * p.discount) / 100)}
-                  </h2>
-                  <p className="line-through">{p.price}</p>
-                  <p>-{p.discount}%</p>
+                  </h2> */}
+                  <p className="text-md text-green-800">{p.price} ج.م</p>
+                  <p>العمولة : {p.discount} ج.م</p>
                 </div>
               </div>
             </div>

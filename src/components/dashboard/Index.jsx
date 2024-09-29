@@ -64,7 +64,7 @@ const Index = () => {
           </div>
           <div className="flex flex-col justify-start items-start text-slate-600">
             <h2 className="text-3xl font-bold">{cancelledOrder}</h2>
-            <span>الطلبات الملغاة </span>
+            <span>الطلبات </span>
           </div>
         </div>
       </div>
@@ -106,7 +106,7 @@ const Index = () => {
                       scope="row"
                       className="px-6 py-4 font-medium whitespace-nowrap"
                     >
-                      ${o.price}
+                      ج.م.{o.price}
                     </td>
                     <td
                       scope="row"
@@ -126,18 +126,18 @@ const Index = () => {
                     >
                       <Link to={`/dashboard/order/details/${o._id}`}>
                         <span className="bg-green-200 text-green-800 text-md font-semibold mr-2 px-3 py-[2px] rounded">
-                          View
+                          عرض
                         </span>
                       </Link>
 
-                      {o.payment_status !== "paid" && (
+                      {/* {o.payment_status !== "paid" && (
                         <span
                           onClick={() => redirect(o)}
                           className="bg-green-200 text-green-800 text-md font-semibold mr-2 px-3 py-[2px] rounded cursor-pointer"
                         >
                           Pay Now
                         </span>
-                      )}
+                      )} */}
                     </td>
                   </tr>
                 ))}

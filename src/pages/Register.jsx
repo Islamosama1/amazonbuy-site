@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { FaFacebookF } from "react-icons/fa6";
-import { FaGoogle } from "react-icons/fa6";
+// import { FaFacebookF } from "react-icons/fa6";
+// import { FaGoogle } from "react-icons/fa6";
+import { FaWhatsapp } from "react-icons/fa";
+
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { customer_register, messageClear } from "../store/reducers/authReducer";
@@ -143,24 +145,29 @@ const Register = () => {
                   </Link>{" "}
                 </p>
               </div>
-
+              {/* 
               <a target="_blank" href="https://amazonbuy-dashboard.vercel.app">
                 <div className="px-8 w-full py-2 bg-[#02e3e0] shadow hover:shadow-red-500/50 text-white rounded-md flex justify-center items-center gap-2 mb-3">
                   تسجيل الدخول كبائع
                 </div>
-              </a>
-
-              <a target="_blank" href="https://amazonbuy-dashboard.vercel.app/register">
+              </a> */}
+              <a
+                target="_blank"
+                href="https://chat.whatsapp.com/DveeGhT3er6GvMvTnFNF2L"
+              >
                 <div className="px-8 w-full py-2 bg-[#ad2cc4] shadow hover:shadow-red-500/50 text-white rounded-md flex justify-center items-center gap-2 mb-3">
-                  انشاء حساب كبائع
+                  انضمام الي جروب الدعم
+                  <span>
+                    <FaWhatsapp />
+                  </span>
                 </div>
               </a>
             </div>
 
             <div className="md:hidden flex-row w-full h-full sm:flex-col sm:w-full py-4 pr-4">
               <img
-                src="https://www.amazonbuy.site/images/login.jpg"
-                className="object-cover w-full h-full rounded-md"
+                src="http://localhost:3000/images/login.jpg"
+                className="object-fill w-full h-full rounded-md"
                 alt=""
               />
             </div>

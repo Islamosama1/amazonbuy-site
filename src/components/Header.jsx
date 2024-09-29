@@ -63,15 +63,15 @@ const Header = () => {
                 <span>
                   <MdEmail />
                 </span>
-                <span>support@amazonbuy.site</span>
+                <span>support@amshopping.vercel.app</span>
               </li>
 
-              <li className="flex relative justify-center items-center gap-2 text-sm ">
+              {/* <li className="flex relative justify-center items-center gap-2 text-sm ">
                 <span>
                   <IoMdPhonePortrait />
                 </span>
                 <span>+(123) 3243 343</span>
-              </li>
+              </li> */}
             </ul>
 
             <div>
@@ -91,7 +91,7 @@ const Header = () => {
                   </a>
                 </div>
                 <div className="flex group cursor-pointer text-slate-800 text-sm justify-center items-center gap-1 relative after:h-[18px] after:w-[1px] after:bg-[#afafaf] after:-right-[16px] after:absolute before:absolute before:h-[18px] before:bg-[#afafaf] before:w-[1px] before:-left-[20px]">
-                  <img src="https://www.amazonbuy.site/images/language.png" alt="" />
+                  <img src="http://localhost:3000/images/language.png" alt="" />
                   <span>
                     <IoMdArrowDropdown />
                   </span>
@@ -136,7 +136,11 @@ const Header = () => {
             <div className="md-lg:w-full w-3/12 md-lg:pt-4">
               <div className="flex justify-between items-center">
                 <Link to="/">
-                  <img src="https://www.amazonbuy.site/images/logo.png" alt="" />
+                  <img
+                    className="w-[190px] h-[70px]"
+                    src="http://localhost:3000/images/logo.png"
+                    alt=""
+                  />
                 </Link>
                 <div
                   className="justify-center items-center w-[30px] h-[30px] bg-white text-slate-600 border border-slate-600 rounded-sm cursor-pointer lg:hidden md-lg:flex xl:hidden hidden"
@@ -176,7 +180,7 @@ const Header = () => {
                       الاعلانات
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link
                       className={`p-2 block ${
                         pathname === "/blog"
@@ -186,8 +190,8 @@ const Header = () => {
                     >
                       المدونة
                     </Link>
-                  </li>
-                  <li>
+                  </li> */}
+                  {/* <li>
                     <Link
                       className={`p-2 block ${
                         pathname === "/about"
@@ -197,8 +201,8 @@ const Header = () => {
                     >
                       معلومات عنا{" "}
                     </Link>
-                  </li>
-                  <li>
+                  </li> */}
+                  {/* <li>
                     <Link
                       className={`p-2 block ${
                         pathname === "/contact"
@@ -208,7 +212,7 @@ const Header = () => {
                     >
                       تواصل معنا
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
 
                 <div className="flex md-lg:hidden justify-center items-center gap-5">
@@ -267,11 +271,11 @@ const Header = () => {
         >
           <div className="flex justify-start flex-col gap-6">
             <Link to="/">
-              <img src="https://www.amazonbuy.site/images/logo.png" alt="" />
+              <img src="http://localhost:3000/images/logo.png" alt="" />
             </Link>
             <div className="flex justify-start items-center gap-10">
               <div className="flex group cursor-pointer text-slate-800 text-sm justify-center items-center gap-1 relative after:h-[18px] after:w-[1px] after:bg-[#afafaf] after:-right-[16px] after:absolute ">
-                <img src="https://www.amazonbuy.site/images/language.png" alt="" />
+                <img src="http://localhost:3000/images/language.png" alt="" />
                 <span>
                   <IoMdArrowDropdown />
                 </span>
@@ -327,7 +331,7 @@ const Header = () => {
                   الاعلانات
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   className={`py-2 block ${
                     pathname === "/blog" ? "text-[#059473]" : "text-slate-600"
@@ -335,8 +339,8 @@ const Header = () => {
                 >
                   المدونة
                 </Link>
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                 <Link
                   className={`py-2 block ${
                     pathname === "/about" ? "text-[#059473]" : "text-slate-600"
@@ -344,8 +348,8 @@ const Header = () => {
                 >
                   معلومات عنا
                 </Link>
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                 <Link
                   className={`py-2 block ${
                     pathname === "/contact"
@@ -353,11 +357,11 @@ const Header = () => {
                       : "text-slate-600"
                   } `}
                 >
-                 تواصل معنا
+                  تواصل معنا
                 </Link>
-              </li>
+              </li> */}
             </ul>
-            <div className="flex justify-start items-center gap-4 text-black">
+            {/* <div className="flex justify-start items-center gap-4 text-black">
               <a href="#">
                 <FaFacebookF />
               </a>
@@ -370,7 +374,7 @@ const Header = () => {
               <a href="#">
                 <FaGithub />{" "}
               </a>
-            </div>
+            </div> */}
 
             <div className="w-full flex justify-end md-lg:justify-start gap-3 items-center">
               <div className="w-[48px] h-[48px] rounded-full flex bg-[#f5f5f5] justify-center items-center ">
@@ -380,19 +384,19 @@ const Header = () => {
               </div>
               <div className="flex justify-end flex-col gap-1">
                 <h2 className="text-sm font-medium text-slate-700">
-                  +134343455
+                  +201556696442
                 </h2>
                 <span className="text-xs">دعم 24/7</span>
               </div>
             </div>
 
             <ul className="flex flex-col justify-start items-start gap-3 text-[#1c1c1c]">
-              <li className="flex justify-start items-center gap-2 text-sm">
+              {/* <li className="flex justify-start items-center gap-2 text-sm">
                 <span>
                   <MdEmail />
                 </span>
                 <span>support@gmail.com</span>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
@@ -452,7 +456,10 @@ const Header = () => {
             <div className="flex flex-wrap w-full justify-between items-center md-lg:gap-6">
               <div className="w-8/12 md-lg:w-full">
                 <div className="flex border h-[50px] items-center relative gap-6">
-                  <div className="relative after:absolute after:h-[25px] after:w-[1px] after:bg-[#afafaf] after:-right-[15px] md:hidden" dir="rtl">
+                  <div
+                    className="relative after:absolute after:h-[25px] after:w-[1px] after:bg-[#afafaf] after:-right-[15px] md:hidden"
+                    dir="rtl"
+                  >
                     <select
                       onChange={(e) => setCategory(e.target.value)}
                       className="w-[150px] text-slate-600 font-semibold bg-transparent px-2 h-full outline-0 border-none"
@@ -494,7 +501,7 @@ const Header = () => {
                   </div>
                   <div className="flex justify-end flex-col gap-1">
                     <h2 className="text-md font-medium text-slate-700">
-                      +1343-43233455
+                      +201556696442
                     </h2>
                     <span className="text-sm">دعم 24/7</span>
                   </div>

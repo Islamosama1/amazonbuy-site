@@ -22,13 +22,13 @@ const Footer = () => {
           <div className="flex flex-col gap-3">
             <img
               className="w-[190px] h-[70px]"
-              src="https://www.amazonbuy.site/images/logoF.png"
+              src="http://localhost:3000/images/logoF.png"
               alt="logo"
             />
             <ul className="flex flex-col gap-2 text-slate-600" dir="rtl">
-              <li>العنوان : شارع القاهرة، بلدة إيج هاربور، نيوجيرسي</li>
+              {/* <li>العنوان : شارع القاهرة، بلدة إيج هاربور، نيوجيرسي</li>
               <li>الهاتف : 4343434344</li>
-              <li>البريد الإلكتروني: support@easylearingbd.com</li>
+              <li>البريد الإلكتروني: support@easylearingbd.com</li> */}
             </ul>
           </div>
         </div>

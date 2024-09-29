@@ -173,7 +173,7 @@ const Details = () => {
   return (
     <div>
       <Header />
-      <section className='bg-[url("https://www.amazonbuy.site/images/banner/shop.png")] h-[220px] mt-6 bg-cover bg-no-repeat relative bg-left'>
+      <section className='bg-[url("http://localhost:3000/images/banner/shop.png")] h-[220px] mt-6 bg-cover bg-no-repeat relative bg-left'>
         <div className="absolute left-0 top-0 w-full h-full bg-[#2422228a]">
           <div className="w-[85%] md:w-[80%] sm:w-[90%] lg:w-[90%] h-full mx-auto">
             <div className="flex flex-col justify-center gap-1 items-center h-full w-full text-white">
@@ -252,11 +252,9 @@ const Details = () => {
                   <Rating ratings={product?.rating} />
                 </div>
                 <span className="text-green-500 text-xl">
-                  {new Date(product?.createdAt).toLocaleString("ar-EG", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  })}
+                  العمولة{" "}: {" "}
+                  {product.discount}
+                  ج
                 </span>
               </div>
 
@@ -264,13 +262,13 @@ const Details = () => {
                 {product.discount !== 0 ? (
                   <>
                     السعر:
-                    <h2 className="line-through">
+                    <h2>
                       {product?.price?.toLocaleString("ar-EG", {
                         style: "currency",
                         currency: "EGP",
                       })}
                     </h2>
-                    <h2>
+                    {/* <h2>
                       {(
                         product.price -
                         Math.floor((product.price * product.discount) / 100)
@@ -279,7 +277,7 @@ const Details = () => {
                         currency: "EGP",
                       })}
                       (خصم {product.discount}%)
-                    </h2>
+                    </h2> */}
                   </>
                 ) : (
                   <h2>
@@ -294,9 +292,9 @@ const Details = () => {
 
               <div className="text-slate-600">
                 <p>{product.description} </p>
-                <p className="text-slate-600 py-1 font-bold">
+                {/* <p className="text-slate-600 py-1 font-bold">
                   اسم البائع : {product.shopName}
-                </p>
+                </p> */}
               </div>
 
               <div className="flex gap-3 pb-10 border-b">
@@ -337,8 +335,8 @@ const Details = () => {
               <div className="flex py-5 gap-5">
                 <div className="w-[150px] text-black font-bold text-xl flex flex-col gap-5">
                   <span>العدد المتوفر :</span>
-                  <span>رقم هاتف البائع :</span>
-                  <span>شارك على</span>
+                  {/* <span>رقم هاتف البائع :</span>
+                  <span>شارك على</span> */}
                 </div>
                 <div className="flex flex-col gap-5">
                   <span
@@ -350,16 +348,16 @@ const Details = () => {
                       ? `العدد المتاح(${product.stock})`
                       : "غير متوفر"}
                   </span>
-                  <span
+                  {/* <span
                     className={`text-${
                       product.brand ? "red" : "green"
                     }-500 text-xl`}
                   >
                     {product.brand ? `${product.brand}` : "غير متوفر"}
-                  </span>
+                  </span> */}
 
                   <ul className="flex justify-start items-center gap-3">
-                    <li>
+                    {/* <li>
                       <a
                         className="w-[38px] h-[38px] hover:bg-[#059473] hover:text-white flex justify-center items-center bg-indigo-500 rounded-full text-white"
                         href="https://www.facebook.com/"
@@ -385,8 +383,8 @@ const Details = () => {
                         {" "}
                         <FaLinkedin />{" "}
                       </a>
-                    </li>
-                    <li>
+                    </li> */}
+                    {/* <li>
                       <a
                         className="w-[38px] h-[38px] hover:bg-[#059473] hover:text-white flex justify-center items-center bg-blue-500 rounded-full text-white"
                         href="#"
@@ -394,12 +392,12 @@ const Details = () => {
                         {" "}
                         <FaGithub />{" "}
                       </a>
-                    </li>
+                    </li> */}
                   </ul>
                 </div>
               </div>
 
-              <div className="flex gap-3">
+              {/* <div className="flex gap-3">
                 {product.stock ? (
                   <Link
                     target="_blank"
@@ -418,7 +416,7 @@ const Details = () => {
                 >
                   تواصل مع البائع عن طريق الموقع
                 </Link>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

@@ -160,7 +160,7 @@ const Chat = () => {
                         >
                           <img
                             className="w-[30px] h-[30px] "
-                            src="https://www.amazonbuy.site/images/user.png"
+                            src="http://localhost:3000/images/user.png"
                             alt=""
                           />
                           <div className="p-2 bg-purple-500 text-white rounded-md">
@@ -177,7 +177,7 @@ const Chat = () => {
                         >
                           <img
                             className="w-[30px] h-[30px] "
-                            src="https://www.amazonbuy.site/images/user.png"
+                            src="http://localhost:3000/images/user.png"
                             alt=""
                           />
                           <div className="p-2 bg-cyan-500 text-white rounded-md">
