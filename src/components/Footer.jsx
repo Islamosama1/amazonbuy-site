@@ -17,7 +17,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-[#f3f6fa]">
-      <div className="w-[85%] flex flex-wrap mx-auto border-b py-16 md-lg:pb-10 sm:pb-6">
+      {/* <div className="w-[85%] flex flex-wrap mx-auto border-b py-16 md-lg:pb-10 sm:pb-6">
         <div className="w-3/12 lg:w-4/12 sm:w-full">
           <div className="flex flex-col gap-3">
             <img
@@ -26,9 +26,9 @@ const Footer = () => {
               alt="logo"
             />
             <ul className="flex flex-col gap-2 text-slate-600" dir="rtl">
-              {/* <li>العنوان : شارع القاهرة، بلدة إيج هاربور، نيوجيرسي</li>
+              <li>العنوان : شارع القاهرة، بلدة إيج هاربور، نيوجيرسي</li>
               <li>الهاتف : 4343434344</li>
-              <li>البريد الإلكتروني: support@easylearingbd.com</li> */}
+              <li>البريد الإلكتروني: support@easylearingbd.com</li>
             </ul>
           </div>
         </div>
@@ -132,10 +132,10 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className="w-[90%] flex flex-wrap justify-center items-center text-slate-600 mx-auto py-5 text-center">
-        <span>Copiright @ 2024 All Rights Reserved </span>
+        <span>Copiright @ {new Date().getFullYear()} All Rights Reserved </span>
       </div>
 
       <div className="hidden fixed md-lg:block w-[50px] h-[110px] bottom-3 right-2 bg-white rounded-full p-2">
