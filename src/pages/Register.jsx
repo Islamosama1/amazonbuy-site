@@ -45,13 +45,13 @@ const Register = () => {
       toast.error(errorMessage);
       dispatch(messageClear());
     }
-    if (userInfo) {
-      if (userInfo.isVerified) {
-        navigate("/");
-      } else {
-        navigate("/activation");
-      }
-    }
+    // if (userInfo) {
+    //   if (userInfo.isVerified) {
+    //     navigate("/");
+    //   } else {
+    //     navigate("/activation");
+    //   }
+    // }
   }, [successMessage, errorMessage]);
 
   return (
