@@ -13,7 +13,7 @@ const ActivationComponent = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    // console.log(userInfo);
+    console.log(userInfo);
     if (successMessage) {
       toast.success(successMessage);
       dispatch(messageClear());
@@ -22,23 +22,24 @@ const ActivationComponent = () => {
       toast.error(errorMessage);
       dispatch(messageClear());
     }
-    // if (userInfo) {
-    //   if (userInfo.isVerified) {
-    //     navigate("/");
-    //   } else {
-    //     navigate("/activation");
-    //   }
-    // }
+    if (userInfo) {
+      console.log(userInfo);
+      if (userInfo.isVerified) {
+        navigate("/");
+      } else {
+        navigate("/activation");
+      }
+    }
   }, [successMessage, errorMessage]);
 
   useEffect(() => {
-    // if (userInfo) {
-    //   if (userInfo.isVerified) {
-    //     navigate("/");
-    //   } else {
-    //     navigate("/activation");
-    //   }
-    // }
+    if (userInfo) {
+      if (userInfo.isVerified) {
+        navigate("/");
+      } else {
+        navigate("/activation");
+      }
+    }
   }, [userInfo]);
   return (
     <div className="container relative flex pt-20 flex-col items-center justify-center lg:px-0">

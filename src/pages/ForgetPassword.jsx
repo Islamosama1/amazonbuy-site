@@ -1,17 +1,14 @@
 import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-// import { FaFacebookF } from "react-icons/fa6";
-// import { FaGoogle } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa";
-// import { FaPhoneAlt } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { customer_login, messageClear } from "../store/reducers/authReducer";
+import { customer_forget, messageClear } from "../store/reducers/authReducer";
 import toast from "react-hot-toast";
 import { FadeLoader } from "react-spinners";
 
-const Login = () => {
+const ForgetPassword = () => {
   const navigate = useNavigate();
   const { loader, errorMessage, successMessage, userInfo } = useSelector(
     (state) => state.auth
@@ -20,7 +17,6 @@ const Login = () => {
 
   const [state, setState] = useState({
     email: "",
-    password: "",
   });
 
   const inputHandle = (e) => {
@@ -32,7 +28,7 @@ const Login = () => {
 
   const login = (e) => {
     e.preventDefault();
-    dispatch(customer_login(state));
+    dispatch(customer_forget(state));
   };
 
   useEffect(() => {
@@ -75,7 +71,7 @@ const Login = () => {
           <div className="grid grid-cols-2 md:grid-cols-1 w-full max-w-3xl mx-auto bg-white rounded-md">
             <div className="px-8 py-8">
               <h2 className="text-center w-full text-xl text-slate-600 font-bold">
-                تسجيل الدخول{" "}
+                نسيت كلمة المرور{" "}
               </h2>
 
               <div>
@@ -94,7 +90,7 @@ const Login = () => {
                     />
                   </div>
 
-                  <div className="flex flex-col gap-1 mb-2">
+                  {/* <div className="flex flex-col gap-1 mb-2">
                     <label htmlFor="password">كلمة المرور</label>
                     <input
                       onChange={inputHandle}
@@ -106,13 +102,13 @@ const Login = () => {
                       placeholder="Password"
                       required
                     />
-                  </div>
+                  </div> */}
 
                   <button className="px-8 w-full py-2 bg-[#059473] shadow-lg hover:shadow-green-500/40 text-white rounded-md">
-                    تسجيل الدخول
+                    أرسل رابط لتغيير كلمة المرور
                   </button>
                 </form>
-                <div className="text-center text-slate-600 pb-1 pt-8">
+                {/* <div className="text-center text-slate-600 pb-1 pt-8">
                   <p>
                     هل نسيت كلمة المرور؟{" "}
                     <Link className="text-blue-500" to="/forget">
@@ -120,7 +116,7 @@ const Login = () => {
                       البحث عن حسابك
                     </Link>{" "}
                   </p>
-                </div>
+                </div> */}
                 <div className="flex justify-center items-center py-2">
                   <div className="h-[1px] bg-slate-300 w-[95%]"> </div>
                   <span className="px-3 text-slate-600">أو</span>
@@ -188,4 +184,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default ForgetPassword;

@@ -25,7 +25,8 @@ import Chat from "./components/dashboard/Chat";
 import ConfirmOrder from "./pages/ConfirmOrder";
 import ActivateComponent from "./components/ActivateComponent";
 import ActivationComponent from "./components/ActivationComponent";
-
+import ForgetPassword from "./pages/ForgetPassword";
+import ResetPassword from "./pages/ResetPassword";
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -51,8 +52,10 @@ function App() {
 
         {/* Public Routes */}
         <Route path="/login" element={<Login />} />
+        <Route path="/forget" element={<ForgetPassword />} />
         <Route path="/register" element={<Register />} />
         <Route path="/activate/:token" element={<ActivateComponent />} />
+        <Route path="/reset-password/:token" element={<ResetPassword />} />
         <Route path="/activation" element={<ActivationComponent />} />
         {/* Protected Routes */}
         <Route element={<ProtectUser />}>

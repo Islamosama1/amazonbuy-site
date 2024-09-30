@@ -31,6 +31,20 @@ export const customer_login = createAsyncThunk(
   }
 );
 // End Method
+export const customer_forget = createAsyncThunk(
+  "auth/forget",
+  async (info, { rejectWithValue, fulfillWithValue }) => {
+    try {
+      const { data } = await api.post("/forgot-password", info);
+      // localStorage.setItem("customerToken", data.token);
+      console.log(data)
+      return fulfillWithValue(data);
+    } catch (error) {
+      return rejectWithValue(error.response.data);
+    }
+  }
+);
+// End Method
 export const activation = createAsyncThunk(
   "auth/activation",
   async (token, { rejectWithValue, fulfillWithValue }) => {
@@ -44,24 +58,22 @@ export const activation = createAsyncThunk(
   }
 );
 // End Method
-// export const seller_change_password_and_email = createAsyncThunk(
-//   "auth/seller_change_password_and_email",
-//   async (info, { rejectWithValue, fulfillWithValue }) => {
-//     try {
-//       console.log(info);
-//       const { data } = await api.post(
-//         "/seller-change-password-and-email",
-//         info,
-//         { withCredentials: true }
-//       );
-//       console.log(data);
-//       return fulfillWithValue(data);
-//     } catch (error) {
-//       // console.log(error.response.data)
-//       return rejectWithValue(error.response.data);
-//     }
-//   }
-// );
+export const reset_password = createAsyncThunk(
+  "auth/reset",
+  async ({ token, info }, { rejectWithValue, fulfillWithValue }) => {
+    try {
+      console.log(info);
+      const { data } = await api.post(`/reset-password/${token}`,
+        info
+      );
+      console.log(data);
+      return fulfillWithValue(data);
+    } catch (error) {
+      return rejectWithValue(error.response.data);
+    }
+  }
+);
+// End Method
 export const seller_change_password_and_email = createAsyncThunk(
   "auth/seller_change_password_and_email",
   async (info, { rejectWithValue, fulfillWithValue }) => {
@@ -100,6 +112,7 @@ export const seller_change_password_and_email = createAsyncThunk(
 const decodeToken = (token) => {
   if (token) {
     const userInfo = jwtDecode(token);
+    console.log(userInfo);
     return userInfo;
   } else {
     return "";
@@ -154,7 +167,29 @@ export const authReducer = createSlice({
         state.loader = false;
         state.userInfo = userInfo;
       })
+      .addCase(customer_forget.pending, (state, { payload }) => {
+        state.loader = true;
+      })
+      .addCase(customer_forget.rejected, (state, { payload }) => {
+        state.errorMessage = payload.error;
+        state.loader = false;
+      })
+      .addCase(customer_forget.fulfilled, (state, { payload }) => {
+        state.successMessage = payload.message;
+        state.loader = false;
+      })
 
+      .addCase(reset_password.pending, (state, { payload }) => {
+        state.loader = true;
+      })
+      .addCase(reset_password.rejected, (state, { payload }) => {
+        state.errorMessage = payload.error;
+        state.loader = false;
+      })
+      .addCase(reset_password.fulfilled, (state, { payload }) => {
+        state.successMessage = payload.message;
+        state.loader = false;
+      })
       .addCase(activation.pending, (state, { payload }) => {
         state.loader = true;
       })
@@ -164,6 +199,7 @@ export const authReducer = createSlice({
       })
       .addCase(activation.fulfilled, (state, { payload }) => {
         state.successMessage = payload.message;
+        state.userInfo = payload.userInfo;
         state.loader = false;
       })
       .addCase(
