@@ -57,7 +57,7 @@ const Shipping = () => {
   return (
     <div>
       <Header />
-      <section className='bg-[url("https://amshopping.vercel.app/images/banner/shop.png")] h-[220px] mt-6 bg-cover bg-no-repeat relative bg-left'>
+      <section className='bg-[url("http://localhost:3000/images/banner/shop.png")] h-[220px] mt-6 bg-cover bg-no-repeat relative bg-left'>
         <div className="absolute left-0 top-0 w-full h-full bg-[#2422228a]">
           <div className="w-[85%] md:w-[80%] sm:w-[90%] lg:w-[90%] h-full mx-auto">
             <div className="flex flex-col justify-center gap-1 items-center h-full w-full text-white">
@@ -79,7 +79,7 @@ const Shipping = () => {
           <div className="w-full flex flex-wrap">
             <div className="w-[67%] md-lg:w-full">
               <div className="flex flex-col gap-3">
-                <div className="bg-white p-6 shadow-sm rounded-md">
+                <div className="bg-white p-6 shadow-sm rounded-md" dir="rtl">
                   <h2 className="text-slate-600 font-bold pb-3">
                     معلومات الشحن{" "}
                   </h2>
@@ -89,7 +89,7 @@ const Shipping = () => {
                       <form onSubmit={save}>
                         <div className="flex md:flex-col md:gap-2 w-full gap-5 text-slate-600">
                           <div className="flex flex-col gap-1 mb-2 w-full">
-                            <label htmlFor="name"> اسم </label>
+                            <label htmlFor="name"> اسم العميل </label>
                             <input
                               onChange={inputHandle}
                               value={state.name}
@@ -97,12 +97,12 @@ const Shipping = () => {
                               className="w-full px-3 py-2 border border-slate-200 outline-none focus:border-green-500 rounded-md"
                               name="name"
                               id="name"
-                              placeholder="Name"
+                              placeholder="أدخل اسم العميل"
                             />
                           </div>
 
                           <div className="flex flex-col gap-1 mb-2 w-full">
-                            <label htmlFor="address"> عنوان </label>
+                            <label htmlFor="address"> اللون </label>
                             <input
                               onChange={inputHandle}
                               value={state.address}
@@ -110,14 +110,14 @@ const Shipping = () => {
                               className="w-full px-3 py-2 border border-slate-200 outline-none focus:border-green-500 rounded-md"
                               name="address"
                               id="address"
-                              placeholder="Address"
+                              placeholder="أسود - رمادي - أبيض"
                             />
                           </div>
                         </div>
 
                         <div className="flex md:flex-col md:gap-2 w-full gap-5 text-slate-600">
                           <div className="flex flex-col gap-1 mb-2 w-full">
-                            <label htmlFor="phone"> هاتف </label>
+                            <label htmlFor="phone"> الهاتف </label>
                             <input
                               onChange={inputHandle}
                               value={state.phone}
@@ -125,12 +125,12 @@ const Shipping = () => {
                               className="w-full px-3 py-2 border border-slate-200 outline-none focus:border-green-500 rounded-md"
                               name="phone"
                               id="phone"
-                              placeholder="Phone"
+                              placeholder="رقم الهاتف"
                             />
                           </div>
 
                           <div className="flex flex-col gap-1 mb-2 w-full">
-                            <label htmlFor="post"> بريد </label>
+                            <label htmlFor="post"> المقاس </label>
                             <input
                               onChange={inputHandle}
                               value={state.post}
@@ -138,7 +138,7 @@ const Shipping = () => {
                               className="w-full px-3 py-2 border border-slate-200 outline-none focus:border-green-500 rounded-md"
                               name="post"
                               id="post"
-                              placeholder="Post"
+                              placeholder="L - XL - XXL - XXXL"
                             />
                           </div>
                         </div>
@@ -153,7 +153,7 @@ const Shipping = () => {
                               className="w-full px-3 py-2 border border-slate-200 outline-none focus:border-green-500 rounded-md"
                               name="province"
                               id="province"
-                              placeholder="Province"
+                              placeholder="المحافظة"
                             />
                           </div>
 
@@ -166,22 +166,23 @@ const Shipping = () => {
                               className="w-full px-3 py-2 border border-slate-200 outline-none focus:border-green-500 rounded-md"
                               name="city"
                               id="city"
-                              placeholder="City"
+                              placeholder="المدينة"
                             />
                           </div>
                         </div>
 
                         <div className="flex md:flex-col md:gap-2 w-full gap-5 text-slate-600">
                           <div className="flex flex-col gap-1 mb-2 w-full">
-                            <label htmlFor="area"> المنطقة </label>
+                            <label htmlFor="area"> العمولة </label>
                             <input
                               onChange={inputHandle}
                               value={state.area}
-                              type="text"
+                              type="number"
                               className="w-full px-3 py-2 border border-slate-200 outline-none focus:border-green-500 rounded-md"
                               name="area"
                               id="area"
-                              placeholder="Area"
+                              min={{ price }}
+                              placeholder="عمولتك"
                             />
                           </div>
 
@@ -202,11 +203,15 @@ const Shipping = () => {
                       </h2>
                       <p>
                         <span className="bg-blue-200 text-blue-800 text-sm font-medium mr-2 px-2 py-1 rounded">
-                          بيت
+                          بيانات العميل
                         </span>
                         <span>
                           {state.phone} {state.address} {state.province}{" "}
-                          {state.city} {state.area}{" "}
+                          {state.city}
+                          <span className="bg-blue-200 text-blue-800 text-sm font-medium mr-2 px-2 py-1 rounded">
+                            عمولتك{" "}
+                          {state.area}{" "}
+                          </span>
                         </span>
 
                         <span
@@ -264,9 +269,9 @@ const Shipping = () => {
                                 )}
                             </h2> */}
                             <p className="text-lg text-orange-500" dir="rtl">
-                            {pt.productInfo.price} ج.م
+                              {pt.productInfo.price} ج.م
                             </p>
-                            <p>العمولة : {pt.productInfo.discount} ج.م</p>
+                            <p>العمولة :{state.area} || {pt.productInfo.discount} ج.م</p>
                           </div>
                         </div>
                       </div>
@@ -297,7 +302,7 @@ const Shipping = () => {
                   <div className="flex justify-between items-center">
                     <span>المجموع</span>
                     <span className="text-lg text-[#059473]">
-                      ${price + shipping_fee}{" "}
+                      ج.م.{price + shipping_fee}{" "}
                     </span>
                   </div>
                   <button

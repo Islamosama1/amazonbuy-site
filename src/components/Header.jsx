@@ -91,7 +91,7 @@ const Header = () => {
                   </a>
                 </div>
                 <div className="flex group cursor-pointer text-slate-800 text-sm justify-center items-center gap-1 relative after:h-[18px] after:w-[1px] after:bg-[#afafaf] after:-right-[16px] after:absolute before:absolute before:h-[18px] before:bg-[#afafaf] before:w-[1px] before:-left-[20px]">
-                  <img src="https://amshopping.vercel.app/images/language.png" alt="" />
+                  <img src="http://localhost:3000/images/language.png" alt="" />
                   <span>
                     <IoMdArrowDropdown />
                   </span>
@@ -138,7 +138,7 @@ const Header = () => {
                 <Link to="/">
                   <img
                     className="w-[190px] h-[70px]"
-                    src="https://amshopping.vercel.app/images/logo.png"
+                    src="http://localhost:3000/images/logo.png"
                     alt=""
                   />
                 </Link>
@@ -271,11 +271,11 @@ const Header = () => {
         >
           <div className="flex justify-start flex-col gap-6">
             <Link to="/">
-              <img src="https://amshopping.vercel.app/images/logo.png" alt="" />
+              <img src="http://localhost:3000/images/logo.png" alt="" />
             </Link>
             <div className="flex justify-start items-center gap-10">
               <div className="flex group cursor-pointer text-slate-800 text-sm justify-center items-center gap-1 relative after:h-[18px] after:w-[1px] after:bg-[#afafaf] after:-right-[16px] after:absolute ">
-                <img src="https://amshopping.vercel.app/images/language.png" alt="" />
+                <img src="http://localhost:3000/images/language.png" alt="" />
                 <span>
                   <IoMdArrowDropdown />
                 </span>

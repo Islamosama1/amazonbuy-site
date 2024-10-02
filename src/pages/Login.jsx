@@ -174,7 +174,7 @@ const Login = () => {
             {/* <div className="w-full h-full py-4 pr-4"> */}
             <div className="md:hidden flex-row w-full h-full sm:flex-col sm:w-full py-4 pr-4">
               <img
-                src="https://amshopping.vercel.app/images/login.jpg"
+                src="http://localhost:3000/images/login.jpg"
                 className="object-fill w-full h-full rounded-md"
                 alt=""
               />
