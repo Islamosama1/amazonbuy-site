@@ -20,7 +20,7 @@ const Stripe = ({ price, orderId }) => {
   const create_payment = async () => {
     try {
       const { data } = await axios.post(
-        "http://localhost:5000/api/order/create-payment",
+        "https://continued-sheilah-matrixio-7c2a70e3.koyeb.app/api/order/create-payment",
         { price },
         { withCredentials: true }
       );

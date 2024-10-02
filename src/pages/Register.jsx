@@ -166,7 +166,7 @@ const Register = () => {
 
             <div className="md:hidden flex-row w-full h-full sm:flex-col sm:w-full py-4 pr-4">
               <img
-                src="http://localhost:3000/images/login.jpg"
+                src="https://amshopping.vercel.app/images/login.jpg"
                 className="object-fill w-full h-full rounded-md"
                 alt=""
               />

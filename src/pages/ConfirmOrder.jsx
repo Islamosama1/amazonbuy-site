@@ -58,7 +58,7 @@ const ConfirmOrder = () => {
   //     if (orderId) {
   //       try {
   //         await axios.get(
-  //           `http://localhost:5000/api/order/confirm/${orderId}`
+  //           `https://continued-sheilah-matrixio-7c2a70e3.koyeb.app/api/order/confirm/${orderId}`
   //         );
   //         localStorage.removeItem("orderId");
   //         setLoader(false);

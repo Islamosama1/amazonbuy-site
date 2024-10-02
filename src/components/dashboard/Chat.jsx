@@ -14,7 +14,7 @@ import toast from "react-hot-toast";
 import io from "socket.io-client";
 import { FaList } from "react-icons/fa";
 
-const socket = io("http://localhost:5000");
+const socket = io("https://continued-sheilah-matrixio-7c2a70e3.koyeb.app");
 
 const Chat = () => {
   const scrollRef = useRef();
@@ -160,7 +160,7 @@ const Chat = () => {
                         >
                           <img
                             className="w-[30px] h-[30px] "
-                            src="http://localhost:3000/images/user.png"
+                            src="https://amshopping.vercel.app/images/user.png"
                             alt=""
                           />
                           <div className="p-2 bg-purple-500 text-white rounded-md">
@@ -177,7 +177,7 @@ const Chat = () => {
                         >
                           <img
                             className="w-[30px] h-[30px] "
-                            src="http://localhost:3000/images/user.png"
+                            src="https://amshopping.vercel.app/images/user.png"
                             alt=""
                           />
                           <div className="p-2 bg-cyan-500 text-white rounded-md">
