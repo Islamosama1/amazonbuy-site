@@ -47,7 +47,7 @@ const ActivationComponent = () => {
         <div className="flex h-full flex-col items-center justify-center space-y-1">
           <div className="relative mb-4 h-60 w-60 text-muted-foreground">
             <img
-              src="https://amshopping.vercel.app/images/hippo-email-sent.png"
+              src="https://www.amazonbuy.site/images/hippo-email-sent.png"
               alt="logo"
             />
           </div>
@@ -64,7 +64,7 @@ const ActivationComponent = () => {
               >
                 أو اذا كانت لديك مشكلة يمكنك:{" "}
               </h2>
-              <a target="_blank" href="https://amshopping.vercel.app/login">
+              <a target="_blank" href="https://www.amazonbuy.site/login">
                 <div className="w-full py-2 bg-[#02e3e0] shadow hover:shadow-red-500/50 text-white rounded-md flex justify-center items-center gap-2 mb-3">
                   تسجيل الدخول
                 </div>

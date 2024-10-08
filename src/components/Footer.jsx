@@ -22,7 +22,7 @@ const Footer = () => {
           <div className="flex flex-col gap-3">
             <img
               className="w-[190px] h-[70px]"
-              src="https://amshopping.vercel.app/images/logoF.png"
+              src="https://www.amazonbuy.site/images/logoF.png"
               alt="logo"
             />
             <ul className="flex flex-col gap-2 text-slate-600" dir="rtl">

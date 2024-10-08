@@ -28,7 +28,7 @@ const Payment = () => {
                   >
                     <div className="flex flex-col gap-[3px] justify-center items-center">
                       <img
-                        src="https://amshopping.vercel.app/images/payment/stripe.png"
+                        src="https://www.amazonbuy.site/images/payment/stripe.png"
                         alt=""
                       />
                     </div>
@@ -43,7 +43,7 @@ const Payment = () => {
                   >
                     <div className="flex flex-col gap-[3px] justify-center items-center">
                       <img
-                        src="https://amshopping.vercel.app/images/payment/cod.jpg"
+                        src="https://www.amazonbuy.site/images/payment/cod.jpg"
                         alt=""
                       />
                     </div>
